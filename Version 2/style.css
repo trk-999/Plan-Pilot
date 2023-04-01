@@ -1,0 +1,113 @@
+/*
+Setting the width and heigh of the body elements
+of the .html file body so that the user can see
+everything on extension or separate window well
+Setting the margins to the specified pixels on the
+top bottom and centered horizontally with auto
+rather than another specified location. Along with a 
+shadow effect to give an interactive look to all 
+body elements.
+*/
+body {
+    width: 400px;
+    height: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: whitesmoke;;
+    border-radius: 10px;
+  } 
+  
+  
+  h1 {
+    font-size: 25px;
+    text-align: center;
+    color: gray;
+    margin-top: 40px;
+  }
+
+
+/*
+The image style below centers 
+the logo either viewed either
+on extension or .html page.
+*/
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    height: auto;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  button {
+    background-color: gray;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    margin: 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+  button:hover {
+    background-color: #005A6E ;
+  }
+
+  input[type=text] {
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 25px;
+    margin: 5px;
+    padding: 10px;
+}
+  
+  #createTaskButton1 {
+    background-color: green;
+    color: white;
+  }
+  
+  #deleteButton1 {
+    background-color: red;
+    color: white;
+  }
+  
+  #createTaskButton2 {
+    background-color: blue;
+    color: white;
+  }
+  
+  #deleteButton2 {
+    background-color: orange;
+    color: white;
+  }
+  
+  #uncrossButton {
+    background-color: gray;
+    color: white;
+  }
+  
+  #deleteAllTasks {
+    background-color: black;
+    color: white;
+  }
+
+  #link {
+    text-align: center;
+  }
+  
+  li {
+    font-size: 20px;
+    margin: 5px;
+    text-align: left;
+    list-style-type: decimal;
+    text-decoration: line-through;
+}
+
+li:hover {
+    color: #008CBA;
+}
