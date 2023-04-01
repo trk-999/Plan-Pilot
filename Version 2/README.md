@@ -1,5 +1,6 @@
 Plan Pilot Version 2
-This is version 2 of the 'Plan Pilot' Google Chrome extension. In this version, I have made some style changes to make the buttons more distinguishable. Each button now has its own separate color, making it easier for users to identify the function of each button.
+---
+In this version of 'Plan Pilot' Google Chrome extension. In this version, I have made some style changes to make the buttons more distinguishable. Each button now has its own separate color, making it easier for users to identify the function of each button.
 
 However, please note that functionality is still a work in progress. At this time, the buttons do not perform any actions, but I am actively working on debugging and improving the functionality. You can see the progress in the bottom part of the window.js file.
 
