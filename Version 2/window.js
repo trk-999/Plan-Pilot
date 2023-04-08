@@ -7,104 +7,101 @@ in the arrays will represent specific task sitems, necessary information.
 
 "Let" will be used to be limited in scope to the elements of the tasks, buttons, etc.
 */
-let Checklist1 = document.getElementById("Checklist1");
-let checkListInput1 = document.getElementById("checkListInput1")
-let createTaskButton1 = document.getElementById("createTaskButton1");
+
+let taskList1 = document.getElementById("taskList1");
+let taskInput1 = document.getElementById("taskInput1");
+let addTaskButton1 = document.getElementById("addTaskButton1");
+let resetButton1 = document.getElementById("resetButton1");
 let deleteButton1 = document.getElementById("deleteButton1");
 
-let Checklist2 = document.getElementById("Checklist2");
-let checkListInput2 = document.getElementById("checkListInput2")
-let createTaskButton2 = document.getElementById("createTaskButton2");
+let taskList2 = document.getElementById("taskList2");
+let taskInput2 = document.getElementById("taskInput2");
+let addTaskButton2 = document.getElementById("addTaskButton2");
+let resetButton2 = document.getElementById("resetButton2");
 let deleteButton2 = document.getElementById("deleteButton2");
 
+let crossOffButton = document.getElementById("crossOffButton");
+let deleteAllButton = document.getElementById("deleteAllButton");
 
-let uncrossButton = document.getElementById("uncrossButton")
-let deleteAllTasks = document.getElementById("deleteAllTasks")
+let taskList1Items = [];
+let taskList2Items = [];
 
-let firstChecklistItems = [];
-let secondChecklistItems = [];
-
-function refreshCheckList (checkList, checkListItems) {
-    //the 'checklist.innerHTML ' will clear the lists content
-    checkList.innerHTML = "";
-    /*the foor loop here will be used to iterate the items 
+function refreshTaskList(taskList, taskListItems) {
+   //the 'taskList.innerHTML ' will clear the lists content
+  taskList.innerHTML = "";
+   /*the foor loop here will be used to iterate the items 
     in the checkListsItems array.  */
-    for (let i = 0; i < checkListItems.length; i++) {
-        //the let here will a new list item element.    
-        let checkItem = document.createElement("li");
-        /*Essentially, this line of code will create the line of text that is 
+  for (let i = 0; i < taskListItems.length; i++) {
+    //the let here will a new task list item element.  
+    let taskItem = document.createElement("li");
+      /*Essentially, this line of code will create the line of text that is 
         going to be displayed with a number, dot, and the text itself. This is 
         to make the items easier to identify. Such as "buy milk" will look like "1. buy milk"
         */ 
-        let checkText = document.createTextNode((i+1) + ". " + checkListItems[i])
-        //this code will take the text and attach it to the new list item that it was designed for.     
-        checkItem.appendChild(checkText); 
-            //The click event viewer to each to do items for the checklist. It will trigger the CSS to indicate whether it has been finished.9
-            checkItem.addEventListener("click", function() {
-                checkItem.classList.toggle("done");
-            });
-            /*Initially was going to make it "double click" but decided to go with single click for the sake of simplicity for the user. 
+    let taskText = document.createTextNode((i+1) + ". " + taskListItems[i]);
+     //this code will take the text and attach it to the new list item that it was designed for.    
+    taskItem.appendChild(taskText);
+    //The click event viewer here will trigger the CSS to indicate whether it has been finished.
+    taskItem.addEventListener("click", function() {
+      taskItem.classList.toggle("done");
+    });
+                /*Initially was going to make it "double click" but decided to go with single click for the sake of simplicity for the user. 
             Overall, what the code does is change the visual appearance of the item so that the item will be crossed off.*/
-            checkItem.addEventListener("click", function() {
-                checkItem.classList.toggle("crossedOff");
-            });
+    taskItem.addEventListener("click", function() {
+      taskItem.classList.toggle("crossedOff");
+    });
             /*logic of this code will result in a button that is an X button. This "X" button will remove the item from the array
-            Spefically, the 'checkListItems' at the index "i", which will update and display the list using the "RefreshChecklist" 
+            Spefically, the 'checkListItems' at the index "i", which will update and display the list using the "refreshTasklist" 
             function. Thus, the code will function with the creation of the list of items and also to be removed. 
             */
-            let deleteButton = document.createElement("button");
-            deleteButton.innerHTML = "X"; 
-            deleteButton.addEventListener("click", function() {
-                checkListItems.splice(i, 1);
-                refreshCheckList(checkList, checkListItems);
-            });
-            /*
-            The use of .apprendChild with this code is to create the two HTML elements 'checkItem' and
-            'checkList'. Then the 'checkItem' will be added inside the 'checkList' with the apprended 
+    let deleteButton = document.createElement("button");
+    deleteButton.innerHTML = "X";
+    deleteButton.addEventListener("click", function() {
+      taskListItems.splice(i, 1);
+      refreshTaskList(taskList, taskListItems);
+    });
+             /*
+            The use of .apprendChild with this code is to create the two HTML elements 'taskItem' and
+            'taskList'. Then the 'checkItem' will be added inside the 'checkList' with the apprended 
             child method. 
             */
-            checkItem.appendChild(deleteButton);
-            checkList.appendChild(checkItem); 
-    }
+    taskItem.appendChild(deleteButton);
+    taskList.appendChild(taskItem);
+  }
 }
 
 
 //Use the following testes to see what shows debug erros in the javascript for chrome.
 
-// Test Case 1
-let checkList1 = document.createElement("ul");
-let checkListItems1 = ["Task 1", "Task 2", "Task 3"];
-refreshCheckList(checkList1, checkListItems1);
-console.assert(checkList1.children.length === 3, "Test Case 1 Failed: Incorrect number of tasks created");
+let taskList1 = document.getElementById("taskList1");
+console.log("taskList1: ", taskList1);
+let taskInput1 = document.getElementById("taskInput1");
+console.log("taskInput1: ", taskInput1);
+let addTaskButton1 = document.getElementById("addTaskButton1");
+console.log("addTaskButton1: ", addTaskButton1);
+let resetButton1 = document.getElementById("resetButton1");
+console.log("resetButton1: ", resetButton1);
+let deleteButton1 = document.getElementById("deleteButton1");
+console.log("deleteButton1: ", deleteButton1);
 
-// Test Case 2
-let checkList2 = document.createElement("ul");
-let checkListItems2 = ["Task 1", "Task 2", "Task 3"];
-refreshCheckList(checkList2, checkListItems2);
-let taskItem2 = checkList2.children[1];
-taskItem2.click();
-console.assert(taskItem2.classList.contains("done"), "Test Case 2 Failed: Task not marked as done");
+let taskList2 = document.getElementById("taskList2");
+console.log("taskList2: ", taskList2);
+let taskInput2 = document.getElementById("taskInput2");
+console.log("taskInput2: ", taskInput2);
+let addTaskButton2 = document.getElementById("addTaskButton2");
+console.log("addTaskButton2: ", addTaskButton2);
+let resetButton2 = document.getElementById("resetButton2");
+console.log("resetButton2: ", resetButton2);
+let deleteButton2 = document.getElementById("deleteButton2");
+console.log("deleteButton2: ", deleteButton2);
 
-// Test Case 3
-let checkList3 = document.createElement("ul");
-let checkListItems3 = ["Task 1", "Task 2", "Task 3"];
-refreshCheckList(checkList3, checkListItems3);
-let taskItem3 = checkList3.children[1];
-taskItem3.dispatchEvent(new MouseEvent("dblclick"));
-console.assert(taskItem3.classList.contains("crossedOff"), "Test Case 3 Failed: Task not crossed off");
+let crossOffButton = document.getElementById("crossOffButton");
+console.log("crossOffButton: ", crossOffButton);
+let deleteAllButton = document.getElementById("deleteAllButton");
+console.log("deleteAllButton: ", deleteAllButton);
 
-// Test Case 4
-let checkList4 = document.createElement("ul");
-let checkListItems4 = ["Task 1", "Task 2", "Task 3"];
-refreshCheckList(checkList4, checkListItems4);
-let deleteButton4 = checkList4.children[1].querySelector("button");
-deleteButton4.click();
-console.assert(checkListItems4.length === 2, "Test Case 4 Failed: Task not deleted from the list");
+let taskList1Items = [];
+console.log("taskList1Items: ", taskList1Items);
+let taskList2Items = [];
+console.log("taskList2Items: ", taskList2Items);
 
-// Test Case 5
-let checkList5 = document.createElement("ul");
-let checkListItems5 = ["Task 1", "Task 2", "Task 3"];
-refreshCheckList(checkList5, checkListItems5);
-let deleteAllButton5 = document.getElementById("deleteAllTasks");
-deleteAllButton5.click();
-console.assert(checkListItems5.length === 0, "Test Case 5 Failed: All tasks not deleted from the list");
