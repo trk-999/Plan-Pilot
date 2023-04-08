@@ -4,42 +4,58 @@
     by checklist designs, implementations, and projects. 
     
     --------------------------------------------------------------------
-    Version 0.0.1
+    Version 0.0.1 -- First Version Released during 04/23
+    Version 0.0.02 -- TBA 
 --> 
+
+
 <!DOCTYPE html>
 <html>
-<head>
-<title>Plan Pilot!</title> <!-- Title that will appear as opened in a web broswer -->
-<link rel="stylesheet" href="styles.css" /> <!-- Style sheet to give a visually appearling look to the chrome extension. -->
-</head> 
-<body>
-
-<img src="images/Plan-Pilot-no-background.png" alt="PLan Pilot - To Do List"> <!-- Placing the logo as the first thing a user will see, with an alt tag to display what the image for those that are using an older broswer -->
-
-<h1> Checklist #1 </h1> <!-- Indicating here that this is the first checklist with a second checklist for those interested in using a second one.-->
-<input type="text"> <!-- Placing a text input here with a simple to understand field box to enter into tasks for this first checklist -->
-<button>Create a task</button> <!-- Button once clicked will generate the task entered in a listing style with "1." to be followed up "2." and as follows. -->
-<button>Reset all task(s)</button> <!-- This button one clicked will immediately erase all inputted items as it would appear at the start -->
-<ul class="firstChecklist"></ul> <!-- This list will display tasks for this first checklist. -->
-
-<h1> Checklist #2 </h1> <!-- Indicating here that this is the second checklist -->
-<input type="text">  <!-- Placing a text input here with a simple to understand field box to enter into tasks for this second checklist -->
-<button>Create a task</button> <!-- Button once clicked will generate the task entered in a listing style with "1." to be followed up "2." and as follows. -->
-<button>Reset all task(s)</button> <!-- This button one clicked will immediately erase all inputted items as it would appear at the start of the second checklist -->
-<ul class="secondChecklist"></ul> <!-- This list will display tasks for this second checklist. -->
-
-<button id="uncrossButton">Uncross the tasks off the list</button> <!-- A button to uncross all items that were checked on both checklists -->
-<button id="deleteAllTasks">Delete all tasks off the list</button> <!-- This button will delete all items in both checklists -->
-<br>
-<div id="link">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Plan Pilot </title>
+  </head>
+  <body>
+    <div style="text-align: center; margin-top: 10px;">
+      <img src="images/Plan-Pilot-small-no-background.png" alt="To-Do List">
+    </div> <!-- Placing the logo at center as the first thing a user will see, with an alt tag to display what the image for those that are using an older broswer -->
+    <h2>Checklist 1</h2> <!-- Indicating here that this is the first checklist with a second checklist for those interested in using a second one.-->
+    <input type="text" id="taskInput1"> <!-- Placing a text input here with a simple to understand field box to enter into tasks for this first checklist -->
+    <br> <!--Placed the <br> tags througout this html file so that there's enough space for the buttons, text inputs, and both checklists -->
+    <br>
+    <button id="addTaskButton1">Create a task! </button>  <!-- Button once clicked will generate the task entered in a listing style with "1." to be followed up "2." and as follows. -->
     <br>
     <br>
-    <a href="#" id="popup-link">Click this link to open up a new window, opening up this window will allow data remain. As closing the extension will have data lost. </a> 
-    <!-- This link '<a>'' link will open a new window to encourage users to keep this window open to do their tasking in and to not lose any data as would occurr when the extension would be closed. -->
-</div>
-<script src="window.js"></script> <!-- This script file will give functionality with the buttons and the extension as a whole. -->
+    <button id="resetButton1">Delete All Tasks! </button> <!-- This button one clicked will immediately erase all inputted items as it would appear at the start -->
+    <br>
+    <br>
+    <button id="deleteButton1">Delete Recent Task! </button> <!-- This button one clicked will immediately erase recently inputted items. -->
+    <ul id="taskList1"></ul> <!-- This list will display task(s) for this first checklist. -->
+    <br>
+    <br>
+    <h2>Checklist 2</h2> <!-- Heading tag here that this is the second checklist -->
+    <input type="text" id="taskInput2"> <!-- Placing a text input here with a simple to understand field box to enter into tasks for this second checklist -->
+    <br>
+    <br>
+    <button id="addTaskButton2">Create a task! </button> <!-- Button once clicked will generate the task entered in a listing style with "1." to be followed up "2." and as follows for the second checklist -->
+    <br>
+    <br>
+    <button id="resetButton2">Delete All Tasks! </button>  <!-- This button one clicked will immediately erase all inputted items as it would appear at the start of the second checklist -->
+    <br>
+    <br>
+    <button id="deleteButton2">Delete Recent Tasks! </button> <!-- This button once clicked will immediately erase recently inputted items. -->
+    <ul id="taskList2"></ul> <!-- This list will display tasks for this second checklist. -->
 
-</body>
+    <br>
+    <div id="link">
+      <p style="font-size: large;">Note: </p>
+      <a href="#" target="_blank" id="open-popup">To not lose checklist progress, click this link so and keep the tab open so the data will remain.</a>
+       <!-- This link '<a>'' link will open a new window to encourage users to keep this window open to do their tasking in and to not lose any data as would occurr when the extension would be closed. -->
+    </div>
+
+   
+   
+
+
+  </body>
 </html>
-
-
