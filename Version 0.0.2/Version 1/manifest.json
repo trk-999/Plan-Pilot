@@ -1,0 +1,16 @@
+{
+   "name": "Plan Pilot",
+   "version": "0.0.1",
+   "manifest_version": 3,
+   "description": "A simplistic to-do-list with two checklists that allows users to add, edit, cross-out, and remove items from the checklists. ",
+   "icons": {
+       "16": "images/plan-pilot-small.png",
+       "32": "images/plan-pilot-small.png",
+       "48": "images/plan-pilot-small.png",
+       "128": "images/plan-pilot-small.png"
+   },
+   "browser_action": {
+       "default_popup": "index.html",
+       "default_icon": "images/plan-pilot-small-no-background.png"
+   }
+}
