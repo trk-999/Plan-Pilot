@@ -1,0 +1,24 @@
+Version 0.0.2 Ideas 
+----------------------------------------------------------------------------------------------------------------------------
+
+
+Add more customization options: Consider allowing users to choose the colors of the text, background, and other elements in the popup window. 
+This could be achieved through either a settings menu or using browser storage to remember users' preferences.
+
+Add reminders and notifications: Allow users to set reminders for specific tasks or to receive notifications for overdue tasks.
+
+Implement drag and drop: Allow users to drag and drop tasks between different lists or to reorder tasks within a list.
+
+Add a calendar view: Display tasks on a calendar so users can easily see when they are due.
+
+Integrate with other services: Allow users to sync their tasks with other to-do list apps or calendar services such as Google Calendar.
+
+Add keyboard shortcuts: Implement keyboard shortcuts so users can quickly add or delete tasks without having to use the mouse.
+
+Use animations: Consider using animations to make the user interface more engaging and intuitive. For example, you could animate tasks as they are added or removed from a list.
+
+Make it mobile-friendly: Ensure that your extension is usable on mobile devices by making the interface responsive and touch-friendly.
+
+Allow collaboration: Consider adding features that would allow multiple users to collaborate on the same to-do list. This could include real-time updates, chat functionality, and user permissions.
+
+Add voice control: Allow users to add and remove tasks by speaking commands to their device's voice assistant, such as Siri or Google Assistant.
