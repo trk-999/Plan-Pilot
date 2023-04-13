@@ -1,0 +1,149 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif; 
+  width: 400px;
+  height: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-right: 10px;
+}
+
+button#addTaskButton1  {
+  padding: 13px;
+  border: none;
+  border-radius: 5px;
+  background-color: #009688;
+  color: white;
+  cursor: pointer;
+}
+
+button#resetButton1  {
+  padding: 13px;
+  border: none;
+  border-radius: 5px;
+  background-color: #E91E63;
+  color: white;
+  cursor: pointer;
+}
+
+button#deleteButton1  {
+  padding: 13px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3F51B5;
+  color: white;
+  cursor: pointer;
+}
+
+button#addTaskButton2  {
+  padding: 13px;
+  border: none;
+  border-radius: 5px;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+}
+
+button#resetButton2  {
+  padding: 13px;
+  border: none;
+  border-radius: 5px;
+  background-color: #607D8B;
+  color: white;
+  cursor: pointer;
+}
+
+button#deleteButton2 {
+  padding: 13px;
+  border: none;
+  border-radius: 5px;
+  background-color: #9C27B0;
+  color: white;
+  cursor: pointer;
+}
+
+
+button:hover {
+  background-color: whitesmoke;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 12px;
+}
+
+li {
+  padding: 12px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+li.done {
+  text-decoration: line-through;
+  color: red;
+}
+
+li.crossedOff {
+  opacity: 0.5;
+}
+
+li button {
+  background-color: #f44336;
+  margin-left: 10px;
+}
+
+#link {
+  margin-top: 25px;
+}
+
+#link a {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  background-color: yellow;
+  border: 2px solid black;
+  display: inline-block;
+}
+
+#link a:hover {
+  text-decoration: underline;
+}
+
+#open-popup {
+  font-weight: bold;
+  font-size: 24px;
+  color: #ff6666;
+  text-decoration: none;
+}
+
+#open-popup:hover {
+  color: #cc0000;
+}
+
+
+
